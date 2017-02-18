@@ -1,0 +1,7 @@
+D:\Development\GitHub\RuleEngine\RuleEngine\bin\Debug\RuleEngine.dll
+D:\Development\GitHub\RuleEngine\RuleEngine\bin\Debug\RuleEngine.pdb
+D:\Development\GitHub\RuleEngine\RuleEngine\bin\Debug\Newtonsoft.Json.dll
+D:\Development\GitHub\RuleEngine\RuleEngine\bin\Debug\Newtonsoft.Json.xml
+D:\Development\GitHub\RuleEngine\RuleEngine\obj\Debug\RuleEngine.csprojResolveAssemblyReference.cache
+D:\Development\GitHub\RuleEngine\RuleEngine\obj\Debug\RuleEngine.dll
+D:\Development\GitHub\RuleEngine\RuleEngine\obj\Debug\RuleEngine.pdb

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85E9FCFF-42D5-486E-8B0C-DC4A9295F6E3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RuleEngine</RootNamespace>
+    <AssemblyName>RuleEngine</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builders\AnyBuilder.cs" />
+    <Compile Include="Builders\ConstantBuilder.cs" />
+    <Compile Include="Builders\DictionaryKeyLocator.cs" />
+    <Compile Include="Builders\NonStrictStringExtensions.cs" />
+    <Compile Include="Builders\StringBuilders\LengthBuilder.cs" />
+    <Compile Include="Builders\StringBuilders\ReverseBuilder.cs" />
+    <Compile Include="Model\Locators\IndexLocator.cs" />
+    <Compile Include="Builders\ElementAtBuilder.cs" />
+    <Compile Include="Builders\FirstBuilder.cs" />
+    <Compile Include="Builders\LastBuilder.cs" />
+    <Compile Include="Builders\MemberBuilder.cs" />
+    <Compile Include="Builders\PredicateBuilder.cs" />
+    <Compile Include="Builders\StringBuilders\ConcatBuilder.cs" />
+    <Compile Include="Builders\StringBuilders\ContainsBuilder.cs" />
+    <Compile Include="Builders\StringBuilders\EndWithBuilder.cs" />
+    <Compile Include="Builders\StringBuilders\RegExBuilder.cs" />
+    <Compile Include="Builders\StringBuilders\StartsWithBuilder.cs" />
+    <Compile Include="Builders\StringBuilders\SubstringBuilder.cs" />
+    <Compile Include="ExpressionBuilder.cs" />
+    <Compile Include="ExpressionFactory.cs" />
+    <Compile Include="Model\AggregatorType.cs" />
+    <Compile Include="Model\Condition.cs" />
+    <Compile Include="Model\ConditionOperand.cs" />
+    <Compile Include="Model\ExtendedRule.cs" />
+    <Compile Include="Model\IRule.cs" />
+    <Compile Include="Model\LinqExtension.cs" />
+    <Compile Include="Model\Locators\AnyLocator.cs" />
+    <Compile Include="Model\Locators\ConstantLocator.cs" />
+    <Compile Include="Model\Locators\ElementAtLocator.cs" />
+    <Compile Include="Model\Locators\FirstLocator.cs" />
+    <Compile Include="Model\Locators\LastLocator.cs" />
+    <Compile Include="Model\Locators\MemberLocator.cs" />
+    <Compile Include="Model\Locator.cs" />
+    <Compile Include="Model\Locators\PredicateLocator.cs" />
+    <Compile Include="Model\Locators\StringLocators\ConcatLocator.cs" />
+    <Compile Include="Model\Locators\StringLocators\ContainsLocator.cs" />
+    <Compile Include="Model\Locators\StringLocators\EndWithLocator.cs" />
+    <Compile Include="Model\Locators\StringLocators\LengthLocator.cs" />
+    <Compile Include="Model\Locators\StringLocators\RegExLocator.cs" />
+    <Compile Include="Model\Locators\StringLocators\ReverseLocator.cs" />
+    <Compile Include="Model\Locators\StringLocators\StartsWithLocator.cs" />
+    <Compile Include="Model\Locators\StringLocators\SubstringLocator.cs" />
+    <Compile Include="Model\LocatorType.cs" />
+    <Compile Include="Model\LocatorOperation.cs" />
+    <Compile Include="Model\Rule.cs" />
+    <Compile Include="Model\TaggedRule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RuleEngine.cs" />
+    <Compile Include="ExpressionTypeHelper.cs" />
+    <Compile Include="Serialization\LocatorConverter.cs" />
+    <Compile Include="Serialization\RuleSerializer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
